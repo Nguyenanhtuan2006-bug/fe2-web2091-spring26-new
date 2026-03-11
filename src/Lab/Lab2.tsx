@@ -45,6 +45,21 @@ export default function Lab2() {
       major: 'Lập trình FrontEnd Senior Developer',
     },
   ];
+  //   Bài 2
+  const productColumns = [
+    { title: 'ID', dataIndex: 'id', key: 'id' },
+    { title: 'Product Name', dataIndex: 'name', key: 'name' },
+    { title: 'Price', dataIndex: 'price', key: 'price' },
+    { title: 'Category', dataIndex: 'category', key: 'category' },
+  ];
+
+  const productData = [
+    { key: 1, id: 1, name: 'iPhone 15', price: '$1200', category: 'Phone' },
+    { key: 2, id: 2, name: 'Samsung S24', price: '$1100', category: 'Phone' },
+    { key: 3, id: 3, name: 'Macbook Pro', price: '$2200', category: 'Laptop' },
+    { key: 4, id: 4, name: 'AirPods', price: '$200', category: 'Accessory' },
+    { key: 5, id: 5, name: 'iPad', price: '$900', category: 'Tablet' },
+  ];
   // Bài 3
   const userColumns = [
     { title: 'ID', dataIndex: 'id', key: 'id' },
@@ -96,7 +111,13 @@ export default function Lab2() {
           pagination={false}
         />
       </Card>
-
+      <Card title="Bài 2 - Danh sách sản phẩm">
+        <Table
+          columns={productColumns}
+          dataSource={productData}
+          pagination={{ pageSize: 3 }}
+        />
+      </Card>
       <Card title="Bài 3 - User Management" className="table-card">
         <Table columns={userColumns} dataSource={userData} pagination={false} />
       </Card>
