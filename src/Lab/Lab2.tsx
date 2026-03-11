@@ -1,4 +1,4 @@
-import { Table, Card } from 'antd';
+import { Table, Card, Space, Button, Tag } from 'antd';
 
 export default function Lab2() {
   // Bài 1
@@ -45,6 +45,47 @@ export default function Lab2() {
       major: 'Lập trình FrontEnd Senior Developer',
     },
   ];
+  // Bài 3
+  const userColumns = [
+    { title: 'ID', dataIndex: 'id', key: 'id' },
+    { title: 'Name', dataIndex: 'name', key: 'name' },
+    { title: 'Email', dataIndex: 'email', key: 'email' },
+
+    {
+      title: 'Status',
+      dataIndex: 'status',
+      key: 'status',
+      render: (status) =>
+        status === 'active' ? (
+          <Tag color="green">Active</Tag>
+        ) : (
+          <Tag color="red">Inactive</Tag>
+        ),
+    },
+
+    {
+      title: 'Action',
+      key: 'action',
+      render: () => (
+        <Space>
+          <Button type="primary">Edit</Button>
+          <Button danger>Delete</Button>
+        </Space>
+      ),
+    },
+  ];
+
+  const userData = [
+    { key: 1, id: 1, name: 'Tuấn', email: 'tuan@gmail.com', status: 'active' },
+    {
+      key: 2,
+      id: 2,
+      name: 'Linh',
+      email: 'linh@gmail.com',
+      status: 'inactive',
+    },
+    { key: 3, id: 3, name: 'Nam', email: 'nam@gmail.com', status: 'active' },
+  ];
 
   return (
     <div className="container">
@@ -54,6 +95,10 @@ export default function Lab2() {
           dataSource={studentData}
           pagination={false}
         />
+      </Card>
+
+      <Card title="Bài 3 - User Management" className="table-card">
+        <Table columns={userColumns} dataSource={userData} pagination={false} />
       </Card>
     </div>
   );
