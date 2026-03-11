@@ -1,5 +1,17 @@
-import { Toaster } from "react-hot-toast";
-import { Link } from "react-router-dom";
+// import { Toaster } from 'react-hot-toast';
+import { Link } from 'react-router-dom';
+import Lab1 from './pages/Lab1';
+import { Button } from 'antd';
+
+// import { Layout } from 'antd';
+// import { Form, Input } from 'antd';
+// // Layout
+// const { Header, Content, Footer } = Layout;
+// // Form
+
+// const onFinish = (values: any) => {
+//   console.log(values);
+// };
 
 function App() {
   return (
@@ -36,9 +48,37 @@ function App() {
       {/* MAIN CONTENT */}
       <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
         <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB2091</h1>
-      </div>
+        <Button type="primary">Click me</Button>
+        <Button type="default">Click me</Button>
+        <Button type="dashed">Click me</Button>
+        <Button type="link">Click me</Button>
+        <Button type="text">Click me</Button>
 
-      <Toaster />
+        {/* <Layout>
+          <Header style={{ color: 'white' }}>Header</Header>
+          <Content style={{ padding: 20 }}>
+            <Form onFinish={onFinish}>
+              <Form.Item
+                name="email"
+                rules={[{ required: true, message: 'Nhập email' }]}
+              >
+                <Input placeholder="Email" />
+                <Input placeholder="Password" />
+              </Form.Item>
+
+              <Form.Item>
+                <Button htmlType="submit" type="primary">
+                  Submit
+                </Button>
+              </Form.Item>
+            </Form>
+          </Content>
+          <Footer>Footer</Footer>
+        </Layout> */}
+      </div>
+      <div>
+        <Lab1 />
+      </div>
     </>
   );
 }
