@@ -5,6 +5,7 @@ import { Button } from 'antd';
 import Lab1 from './Lab/Lab1';
 import Lab2 from './Lab/Lab2';
 import Lab3 from './Lab/Lab3';
+import Lab4 from './Lab/Lab4';
 
 function App() {
   const [lab, setLab] = useState('');
@@ -13,6 +14,8 @@ function App() {
     if (lab === 'lab1') return <Lab1 />;
     if (lab === 'lab2') return <Lab2 />;
     if (lab === 'lab3') return <Lab3 />;
+    if (lab === 'lab4') return <Lab4 />;
+
     return <h2>Chọn bài Lab để xem</h2>;
   };
 
@@ -42,6 +45,10 @@ function App() {
 
           <Button type="default" onClick={() => setLab('lab3')}>
             Lab 3
+          </Button>
+
+          <Button type="default" onClick={() => setLab('lab4')}>
+            Lab 4
           </Button>
         </div>
 
