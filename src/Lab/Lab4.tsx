@@ -77,9 +77,9 @@ export default function Lab4() {
         {/* Bài 4 */}
         <Form.Item label="category" name="categoryId">
           <Select
-            options={categories?.map((c) => ({
-              label: c.title,
-              value: c.id,
+            options={categories?.map((category) => ({
+              label: category.title,
+              value: category.id,
             }))}
           ></Select>
         </Form.Item>

@@ -6,6 +6,7 @@ import Lab1 from './Lab/Lab1';
 import Lab2 from './Lab/Lab2';
 import Lab3 from './Lab/Lab3';
 import Lab4 from './Lab/Lab4';
+import Lab5 from './Lab/Lab5';
 
 function App() {
   const [lab, setLab] = useState('');
@@ -15,6 +16,7 @@ function App() {
     if (lab === 'lab2') return <Lab2 />;
     if (lab === 'lab3') return <Lab3 />;
     if (lab === 'lab4') return <Lab4 />;
+    if (lab === 'lab5') return <Lab5 />;
 
     return <h2>Chọn bài Lab để xem</h2>;
   };
@@ -49,6 +51,10 @@ function App() {
 
           <Button type="default" onClick={() => setLab('lab4')}>
             Lab 4
+          </Button>
+
+          <Button type="default" onClick={() => setLab('lab5')}>
+            Lab 5
           </Button>
         </div>
 

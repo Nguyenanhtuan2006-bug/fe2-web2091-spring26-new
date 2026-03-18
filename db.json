@@ -1,26 +1,29 @@
 {
   "stories": [
     {
-      "title": "Truyện Tranh ",
-      "author": "Tuan",
-      "image": "https://i.pinimg.com/1200x/fe/b9/77/feb977ec978a3d00d4e466a34017a9f5.jpg",
+      "title": "Xấu gái ",
+      "author": "Chanh",
+      "createdAt": "10/09/2007",
       "description": "Mèo lười và thú vui bên người",
-      "id": 1
-    },
-    {
-      "title": "Đẹp trai ",
-      "description": "Mèo lười và thú vui bên người",
+      "image": "https://i.pinimg.com/736x/79/66/3b/79663b56fe3ee766a1a1cc948a263522.jpg",
       "id": 2
     },
     {
       "title": "Đẹp trai ",
+      "author": "Tuan",
+      "createdAt": "09/08/2006",
       "description": "Mèo lười và thú vui bên người",
-      "id": 3
+      "image": "https://i.pinimg.com/736x/46/53/ca/4653ca36b0c2d9b1a1e1690ddc579715.jpg",
+      "id": 1
     },
     {
-      "title": "Đẹp trai ",
-      "description": "Mèo lười và thú vui bên người",
-      "id": 4
+      "title": "édgfhvnvhgdrsq2qerth",
+      "author": "ádgvgfa",
+      "description": "ưerfghhgf",
+      "createdAt": "2026-03-18T17:00:00.000Z",
+      "active": true,
+      "image": "https://picsum.photos/200?random=1",
+      "id": 3
     }
   ],
   "categories": [
