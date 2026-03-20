@@ -1,18 +1,18 @@
 {
   "stories": [
     {
-      "title": "Xấu gái ",
+      "title": "Xấu gái ffff",
       "author": "Chanh",
-      "createdAt": "10/09/2007",
       "description": "Mèo lười và thú vui bên người",
+      "createdAt": "10/09/2008",
       "image": "https://i.pinimg.com/736x/79/66/3b/79663b56fe3ee766a1a1cc948a263522.jpg",
       "id": 2
     },
     {
       "title": "Đẹp trai ",
       "author": "Tuan",
-      "createdAt": "09/08/2006",
       "description": "Mèo lười và thú vui bên người",
+      "createdAt": "09/08/2006",
       "image": "https://i.pinimg.com/736x/46/53/ca/4653ca36b0c2d9b1a1e1690ddc579715.jpg",
       "id": 1
     },
