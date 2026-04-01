@@ -1,12 +1,18 @@
-import { useContext } from 'react';
 import { Layout, Button, Avatar, Space, Switch } from 'antd';
-import { UserContext } from '../context/UserContext';
 import { ThemeContext } from '../context/ThemeContext';
+import { useContext } from 'react';
+import { useAuthStore } from '../stores/authStores';
+import { useNavigate } from 'react-router-dom';
 
-// Thêm { children } vào đây
 export function AppHeader({ children }: { children?: React.ReactNode }) {
-  const { user, login, logout } = useContext(UserContext);
+  const { user, logout } = useAuthStore(); // 🔥 dùng Zustand
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
 
   return (
     <>
@@ -21,6 +27,7 @@ export function AppHeader({ children }: { children?: React.ReactNode }) {
         }}
       >
         <h2 style={{ margin: 0, color: isDarkMode ? '#fff' : '#000' }}>Logo</h2>
+
         <Space size="large">
           <Switch
             checked={isDarkMode}
@@ -28,25 +35,34 @@ export function AppHeader({ children }: { children?: React.ReactNode }) {
             checkedChildren="Tối"
             unCheckedChildren="Sáng"
           />
+
           {user ? (
             <Space>
               <Avatar src={user.avatar} />
+
+            
               <span style={{ color: isDarkMode ? '#fff' : '#000' }}>
-                {user.name}
+                HI {user.email}
               </span>
-              <Button danger onClick={logout}>
+
+           
+              <span style={{ color: 'green' }}>Đã đăng nhập</span>
+
+              <Button danger onClick={handleLogout}>
                 Logout
               </Button>
             </Space>
           ) : (
-            <Button type="primary" onClick={login}>
-              Login
-            </Button>
+            <Space>
+              <span style={{ color: 'red' }}>Chưa đăng nhập</span>
+              <Button type="primary" onClick={() => navigate('/login')}>
+                Login
+              </Button>
+            </Space>
           )}
         </Space>
       </Layout.Header>
 
-      {/* QUAN TRỌNG: Phải có dòng này để nội dung các bài Lab hiện ra */}
       <main>{children}</main>
     </>
   );
