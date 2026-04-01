@@ -14,6 +14,8 @@ import TextArea from 'antd/es/input/TextArea';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { useState } from 'react';
+import { Link, Route } from 'react-router-dom';
+import Lab6 from './Lab6';
 
 export default function Lab5() {
   const queryClient = useQueryClient();
@@ -83,7 +85,10 @@ export default function Lab5() {
       title: 'Action',
       render: (record) => (
         <Space>
-          <Button type="primary">Edit</Button>
+          <Link to={`/edit/${record.id}`} >
+            <Button type="primary">Edit</Button>
+          </Link>
+
           <Button danger onClick={() => onDelete(record.id)}>
             Delete
           </Button>
