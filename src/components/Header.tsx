@@ -5,7 +5,7 @@ import { useAuthStore } from '../stores/authStores';
 import { useNavigate } from 'react-router-dom';
 
 export function AppHeader({ children }: { children?: React.ReactNode }) {
-  const { user, logout } = useAuthStore(); // 🔥 dùng Zustand
+  const { user, logout } = useAuthStore();
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
   const navigate = useNavigate();
 
