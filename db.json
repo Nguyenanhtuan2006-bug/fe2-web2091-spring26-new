@@ -136,6 +136,16 @@
       "email": "nguyenanhtuan09082006@gmail.com",
       "password": "$2a$10$USexMzIiwlLLjRgkTQKqLO1Pky3poe6RTtkDY/Og4xPYUKzX./OLa",
       "id": 2
+    },
+    {
+      "email": "nguyenanhtuan0908@gmail.com",
+      "password": "$2a$10$fmyE4xbQ5niYDCDJyPekTeDuRW5BN1wU/arOVDDHh1QjeqvvT464e",
+      "id": 3
+    },
+    {
+      "email": "Tuan2006@gmail.com",
+      "password": "$2a$10$a1/HJFakU9m9TSTJVbUTVuqHLKzDk0GjctgcpyqK.OOja7KogjScq",
+      "id": 4
     }
   ]
 }
